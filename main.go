@@ -21,6 +21,9 @@ func escapeMarkdown(s string) string {
 		"]", "\\]",
 		"(", "\\(",
 		")", "\\)",
+		"-", "\\-",
+		".", "\\.",
+		"!", "\\!",
 	)
 	return replacer.Replace(s)
 }
