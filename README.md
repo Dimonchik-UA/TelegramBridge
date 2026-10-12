@@ -1,36 +1,41 @@
+
 # Telegram Bridge
-  This is a GitHub Action plugin to notify about the changes in GitHub to Telegram Chat via Bot. This could highly help in incresing the development pace.
 
-## What all can this do ?
-  If you're using the provided [main.yaml](https://github.com/GokulDas027/TelegramBridge/blob/master/main.yaml) (recommended)
-  
-  Will Notify about :
-  * Pushes
-  * Pull Requests (opened, closed, edited, ready_for_review, review_requested, reopened)
-  * Pull Request Review Comments (created)
-  * Issues (opened, edited, pinned, closed, reopened, assigned, labeled)
-  * Issue Comments (created)
-  
-  > the limits are not the boundary, but set for reducing the message bombarding, and it can be easily changed at the main.yaml file at your repository. This could help [Action Triggers Docs](https://developer.github.com/webhooks/).
-  
-## How to Use this ?
-  This will be available as a plugin [here](https://github.com/marketplace/actions/telegrambridge).
-  
-  Or can be used through this [main.yaml](https://github.com/GokulDas027/TelegramBridge/blob/master/main.yaml) file
-    > move it to <repository>/.github/workflows/main.yml
-  
-  Connect it to a [Telegram bot](https://core.telegram.org/bots).
-  * Token is the token of the Bot given by BotFather
-  * Id is the Channel id or your user id, depends on how you need the message to be delivered.
-  
-  ### [Check here for step by step instructions](https://github.com/GokulDas027/TelegramBridge/blob/master/instruction.md)
+Это плагин GitHub Actions, который отправляет уведомления об изменениях в GitHub в чат Telegram через бота. Он помогает ускорить процесс разработки.
 
-## How does the message looks like ?
+## Что умеет этот плагин?
 
-![Sample Message](Screenshot.png)
+Если использовать предоставленный файл [main.yaml](https://github.com/GokulDas027/TelegramBridge/blob/master/main.yaml) (рекомендуется), он будет отправлять уведомления о следующих событиях:
 
-## What's next ?
+- Отправка изменений в репозиторий (Push).
+- Pull Request — запросы на слияние (открытие, закрытие, редактирование, готовность к проверке, запрос проверки, повторное открытие).
+- Комментарии к Pull Request (создание).
+- Issues — задачи (открытие, редактирование, закрепление, закрытие, повторное открытие, назначение исполнителя, добавление метки).
+- Комментарии к Issue (создание).
 
-This is a tailored implementation. This can be changed or re-tailored at [main.go](https://github.com/GokulDas027/TelegramBridge/blob/master/main.go). Curresponting chages must be made at the action's main.yaml too
+> Ограничения установлены не потому, что возможности плагина ограничены, а для предотвращения чрезмерного количества сообщений. Их легко изменить в файле `main.yaml` своего репозитория. Подробнее см. в [документации по триггерам GitHub Actions](https://developer.github.com/webhooks/).
 
-Thanks to [Yanzay](https://github.com/yanzay) and [Athul](github.com/athul).
+## Как использовать плагин?
+
+Плагин доступен в [GitHub Marketplace](https://github.com/marketplace/actions/telegrambridge).
+
+Также его можно использовать с помощью файла [main.yaml](https://github.com/GokulDas027/TelegramBridge/blob/master/main.yaml):
+
+- Поместите его в каталог `<repository>/.github/workflows/main.yml` своего репозитория.
+
+Подключите Telegram-бота:
+
+- **Token** — токен бота, полученный от [BotFather](https://core.telegram.org/bots).
+- **Id** — идентификатор канала или вашего пользователя, в зависимости от того, куда нужно отправлять сообщения.
+
+### [Пошаговая инструкция](https://github.com/GokulDas027/TelegramBridge/blob/master/instruction.md)
+
+## Как выглядят уведомления?
+
+![Пример сообщения](Screenshot.png)
+
+## Что дальше?
+
+Это решение можно настроить под свои потребности. Изменить его можно в файле [main.go](https://github.com/GokulDas027/TelegramBridge/blob/master/main.go). Соответствующие изменения также необходимо внести в файл `main.yaml` GitHub Action.
+
+Благодарность [Yanzay](https://github.com/yanzay) и [Athul](https://github.com/athul).
